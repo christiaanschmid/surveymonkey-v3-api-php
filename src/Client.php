@@ -154,7 +154,7 @@ class Client
         if (empty($body)) {
             // Empty arrays and NULL data inputs both need casting to an empty JSON object.
             // See https://stackoverflow.com/a/41150809/2803757
-            $bodyString = '{}';
+            $bodyString = false;
         } elseif (is_array($body)) {
             $bodyString = json_encode($body);
         }
